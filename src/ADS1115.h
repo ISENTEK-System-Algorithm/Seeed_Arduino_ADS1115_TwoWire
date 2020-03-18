@@ -1,13 +1,13 @@
 #include <Arduino.h>
 #include <Wire.h>
 
-#ifndef ADS115_H
-#define ADS115_H
+#ifndef ADS1115_H
+#define ADS1115_H
 
-#define ADS115_GND_ADDRESS    (0x48)  // ADDR pin connect to GDN
-#define ADS115_VDD_ADDRESS    (0x49)  // ADDR pin connect to VDD
-#define ADS115_SDA_ADDRESS    (0x4A)  // ADDR pin connect to SDA
-#define ADS115_SCL_ADDRESS    (0x4B)  // ADDR pin connect to SCL
+#define ADS1115_GND_ADDRESS    (0x48)  // ADDR pin connect to GDN
+#define ADS1115_VDD_ADDRESS    (0x49)  // ADDR pin connect to VDD
+#define ADS1115_SDA_ADDRESS    (0x4A)  // ADDR pin connect to SDA
+#define ADS1115_SCL_ADDRESS    (0x4B)  // ADDR pin connect to SCL
 
 #define ADS1115_CONVERSIONDELAY     (300)  
 #define ADS1115_POINTER_MASK        (0x03)
@@ -99,7 +99,7 @@ private:
     static int16_t readRegister(uint8_t reg);
 public:
     ADS1115(T& myWire);
-    bool begin(uint8_t i2cAddress = ADS115_GND_ADDRESS);
+    bool begin(uint8_t i2cAddress = ADS1115_GND_ADDRESS);
     void setOperateMode(uint16_t operateMode);
     void setOperateStaus(uint16_t OperateStaus);
     void setPGAGain(uint16_t PGAGain);
@@ -114,4 +114,4 @@ public:
     void setHighThreshold(uint16_t threshold);
 };
 
-#endif /*ADS115_H*/
+#endif /*ADS1115_H*/

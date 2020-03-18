@@ -12,7 +12,7 @@
 void setup(void) 
 {
     Serial.begin(115200);
-    while(!ads.begin(ADS115_GND_ADDRESS)){
+    while(!ads.begin(ADS1115_GND_ADDRESS)){
         Serial.print("ads1115 init failed!!!");
         delay(1000);
     }//0x48
