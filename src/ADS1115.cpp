@@ -179,7 +179,7 @@ template <class T>
 int16_t ADS1115<T>::getConversionResults(channel_t channel){
     setInputMux(_channelToMUX[channel]);
     writeRegister(ADS1115_POINTER_CONFIG, _configRegister);
-    delay(ADS1115_CONVERSIONDELAY);
+    delay(ADS1115_CONVERSIONDELAY / (((_configRegister & ADS1115_DR_MASK)>>5) + 1));
     return (readRegister(ADS1115_POINTER_CONVERT));
 }
 /**************************************************************************/
@@ -243,7 +243,7 @@ void ADS1115<T>::setCompaQueue(uint16_t CompaQueue){
 /**************************************************************************/
 /*!
     @brief set low threshold value 
-    @param threshold  low threshold value (0x0000 ~ 0xffff)
+    @param threshold  low threshold value (0x0000 ~ 0x7fff)
     the Hi_thresh register value must always be greater than the Lo_thresh register value
 */
 /**************************************************************************/
@@ -254,7 +254,7 @@ void ADS1115<T>::setLowThreshold(uint16_t threshold){
 /**************************************************************************/
 /*!
     @brief set high threshold value
-    @param threshold  high threshold value (0x0000 ~ 0xffff)
+    @param threshold  high threshold value (0x0000 ~ 0x7fff)
     the Hi_thresh register value must always be greater than the Lo_thresh register value
 */
 /**************************************************************************/

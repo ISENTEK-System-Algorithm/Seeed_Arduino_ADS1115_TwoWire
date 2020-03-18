@@ -10,7 +10,7 @@
 #define ADS115_SDA_ADDRESS    (0x4A)  // ADDR pin connect to SDA
 #define ADS115_SCL_ADDRESS    (0x4B)  // ADDR pin connect to SCL
 
-#define ADS1115_CONVERSIONDELAY     (10)
+#define ADS1115_CONVERSIONDELAY     (300)  
 #define ADS1115_POINTER_MASK        (0x03)
 #define ADS1115_POINTER_CONVERT     (0x00)
 #define ADS1115_POINTER_CONFIG      (0x01)
