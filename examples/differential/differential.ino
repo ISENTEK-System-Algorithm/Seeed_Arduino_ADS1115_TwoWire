@@ -24,12 +24,12 @@ void setup(void)
     ads.setOperateMode(ADS1115_OS_SINGLE);   
     ads.setOperateStaus(ADS1115_MODE_SINGLE);
 
-    ads.setPGAGain(ADS1115_PGA_6_144); //6.144V 
-    // ads.setPGAGain(ADS1115_PGA_4_096); //4.096V
-    // ads.setPGAGain(ADS1115_PGA_2_048); //2.048V
-    // ads.setPGAGain(ADS1115_PGA_1_024); //1.024V
-    // ads.setPGAGain(ADS1115_PGA_0_512); //0.512V 
-    // ads.setPGAGain(ADS1115_PGA_0_256); //0.256V
+    ads.setPGAGain(ADS1115_PGA_6_144); //MAX 6.144V 
+    // ads.setPGAGain(ADS1115_PGA_4_096); //MAX 4.096V
+    // ads.setPGAGain(ADS1115_PGA_2_048); //MAX 2.048V
+    // ads.setPGAGain(ADS1115_PGA_1_024); //MAX 1.024V
+    // ads.setPGAGain(ADS1115_PGA_0_512); //MAX 0.512V 
+    // ads.setPGAGain(ADS1115_PGA_0_256); //MAX 0.256V
     
     // ads.setSampleRate(ADS1115_DR_8); //8 SPS
     // ads.setSampleRate(ADS1115_DR_16); //16 SPS
