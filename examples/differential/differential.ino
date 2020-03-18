@@ -9,7 +9,6 @@
     ADS1115<TwoWire> ads(Wire);//IIC
 #endif
 
-
 void setup(void) 
 {
     Serial.begin(115200);
