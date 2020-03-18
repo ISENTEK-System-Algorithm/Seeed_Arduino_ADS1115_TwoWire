@@ -1,8 +1,0 @@
-{
-    "port": "COM6",
-    "programmer": "AVRISP mkII",
-    "board": "Seeeduino:samd:seeed_XIAO_m0",
-    "sketch": "examples\\comparator\\comparator.ino",
-    "output": "../ArduinoOutput",
-    "configuration": "usbstack=arduino,debug=off"
-}
