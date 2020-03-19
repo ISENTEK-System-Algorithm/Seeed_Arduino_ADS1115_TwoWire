@@ -23,7 +23,7 @@ void setup(void)
     ads.setCompaMode(ADS1115_COMP_MODE_WINDOW); 
     //Set Comparator mode to window mode
     ads.setCompaPolarity(ADS1115_COMP_POL_ACTVHIGH); 
-    //The ALERT pin keeping low when the ADC value beyond a threshold upper or lower value.
+    //The ALERT pin keeping high when the ADC value beyond a threshold upper or lower value.
     ads.setCompaLatching(ADS1115_COMP_LAT_LATCH);
     //latching when the ADC value beyond a threshold upper or lower value. 
     ads.setCompaQueue(ADS1115_COMP_QUE_1CONV);
