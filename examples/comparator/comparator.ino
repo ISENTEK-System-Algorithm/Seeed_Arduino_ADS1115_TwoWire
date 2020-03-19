@@ -27,7 +27,7 @@ void setup(void)
     ads.setCompaLatching(ADS1115_COMP_LAT_LATCH);
     //latching when the ADC value beyond a threshold upper or lower value. 
     ads.setCompaQueue(ADS1115_COMP_QUE_1CONV);
-    //comparing after 4 Conversion. 
+    //comparing after 1 Conversion. 
     ads.setLowThreshold(0x0050);
     //set low threshold value to 0x0050(0x0000 ~ 0x7fff)
     ads.setHighThreshold(0x4e20);
