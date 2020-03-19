@@ -20,16 +20,14 @@ void setup(void)
     ads.setOperateStaus(ADS1115_MODE_CONTIN);
     ads.setPGAGain(ADS1115_PGA_6_144); //MAX 6.144V 
     ads.setSampleRate(ADS1115_DR_860); //860 SPS
-    ads.setCompaMode(ADS1115_COMP_MODE_WINDOW); 
-    //Set Comparator mode to window mode
-    ads.setCompaPolarity(ADS1115_COMP_POL_ACTVHIGH); 
+    ads.setCompaMode(ADS1115_COMP_MODE_TRAD); 
+    //Set Comparator mode to Traditional mode
+    ads.setCompaPolarity(ADS1115_COMP_POL_ACTVLOW); 
     //The ALERT pin keeping high when the ADC value beyond a threshold upper or lower value.
     ads.setCompaLatching(ADS1115_COMP_LAT_LATCH);
     //latching when the ADC value beyond a threshold upper or lower value. 
     ads.setCompaQueue(ADS1115_COMP_QUE_1CONV);
     //comparing after 1 Conversion. 
-    ads.setLowThreshold(0x0050);
-    //set low threshold value to 0x0050(0x0000 ~ 0x7fff)
     ads.setHighThreshold(0x4e20);
     //set high threshold value to 0x4e20(0x0000 ~ 0x7fff)
 }

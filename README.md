@@ -1,7 +1,7 @@
-# Seeed_Arduino_ADS1115  [![Build Status](https://travis-ci.com/Hansen0314/Seeed_Arduino_ADS1115.svg?branch=master)](https://travis-ci.com/Hansen0314/Seeed_Arduino_ADS1115)
+# Seeed Arduino ADS1115  [![Build Status](https://travis-ci.com/Seeed-Studio/Seeed_Arduino_ADS1115.svg?branch=master)](https://travis-ci.com/Seeed-Studio/Seeed_Arduino_ADS1115)
 ## Introduction 
 
-An Arduino library for ADS1115 Ultra-Small, Low-Power, I 2 C-Compatible, 860-SPS, 16-Bit ADCs.ADC data can be obtained using IIC interface.
+An Arduino library for ADS1115 Ultra-Small, Low-Power, I2C-Compatible, 860-SPS, 16-Bit ADCs.ADC data can be obtained using IIC interface.
 
 ## Usage
 
