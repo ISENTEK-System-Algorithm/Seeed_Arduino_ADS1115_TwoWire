@@ -31,9 +31,9 @@ void setup(void)
     ads.setLowThreshold(0x0050);
     //set low threshold value to 0x0050(0x0000 ~ 0x7fff)
     ads.setHighThreshold(0x4e20);
-    //set hjgh threshold value to 0x4e20(0x0000 ~ 0x7fff)
+    //set high threshold value to 0x4e20(0x0000 ~ 0x7fff)
 }
-void loop(void) 
+void loop(void)
 {   
     int16_t adc0;
     adc0 = ads.getConversionResults(channel0); //P = AIN0, N = GND
