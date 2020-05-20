@@ -15,7 +15,7 @@ void setup(void)
     while(!ads.begin(0x48)){
         Serial.print("ads1115 init failed!!!");
         delay(1000);
-    }//0x48
+    }
     //ads.begin(0x49) 
     //ads.begin(0x4A)
     //ads.begin(0x4B)

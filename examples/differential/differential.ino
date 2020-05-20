@@ -15,7 +15,7 @@ void setup(void)
     while(!ads.begin(0x48)){
         Serial.print("ads1115 init failed!!!");
         delay(1000);
-    }//0x48
+    }
     //ads.begin(0x49) 
     //ads.begin(0x4A)
     //ads.begin(0x4B)
@@ -23,12 +23,12 @@ void setup(void)
     ads.setOperateMode(ADS1115_OS_SINGLE);   
     ads.setOperateStaus(ADS1115_MODE_SINGLE);
 
-    ads.setPGAGain(ADS1115_PGA_6_144); //MAX 6.144V 
-    // ads.setPGAGain(ADS1115_PGA_4_096); //MAX 4.096V
-    // ads.setPGAGain(ADS1115_PGA_2_048); //MAX 2.048V
-    // ads.setPGAGain(ADS1115_PGA_1_024); //MAX 1.024V
-    // ads.setPGAGain(ADS1115_PGA_0_512); //MAX 0.512V 
-    // ads.setPGAGain(ADS1115_PGA_0_256); //MAX 0.256V
+    ads.setPGAGain(ADS1115_PGA_6_144);    // 2/3x gain +/- 6.144V  1 bit =  0.1875mV (default)
+    // ads.setPGAGain(ADS1115_PGA_4_096); // 1x gain   +/- 4.096V  1 bit =  0.125mV
+    // ads.setPGAGain(ADS1115_PGA_2_048); // 2x gain   +/- 2.048V  1 bit =  0.0625mV
+    // ads.setPGAGain(ADS1115_PGA_1_024); // 4x gain   +/- 1.024V  1 bit =  0.03125mV
+    // ads.setPGAGain(ADS1115_PGA_0_512); // 8x gain   +/- 0.512V  1 bit =  0.015625mV
+    // ads.setPGAGain(ADS1115_PGA_0_256); // 16x gain  +/- 0.256V  1 bit =  0.0078125mV
     
     // ads.setSampleRate(ADS1115_DR_8); //8 SPS
     // ads.setSampleRate(ADS1115_DR_16); //16 SPS
