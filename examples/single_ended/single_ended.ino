@@ -12,13 +12,13 @@
 void setup(void) 
 {
     Serial.begin(115200);
-    while(!ads.begin(ADS1115_GND_ADDRESS)){
+    while(!ads.begin(0x48)){
         Serial.print("ads1115 init failed!!!");
         delay(1000);
     }//0x48
-    //ads.begin(ADS115_VDD_ADDRESS)
-    //ads.begin(ADS115_SDA_ADDRESS)
-    //ads.begin(ADS115_SCL_ADDRESS)
+    //ads.begin(0x49) 
+    //ads.begin(0x4A)
+    //ads.begin(0x4B)
 
     ads.setOperateMode(ADS1115_OS_SINGLE);   
     ads.setOperateStaus(ADS1115_MODE_SINGLE);
