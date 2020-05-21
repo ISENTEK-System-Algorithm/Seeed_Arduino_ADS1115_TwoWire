@@ -12,10 +12,13 @@
 void setup(void) 
 {
     Serial.begin(115200);
-    while(!ads.begin(ADS1115_GND_ADDRESS)){
+    while(!ads.begin(0x48)){
         Serial.print("ads1115 init failed!!!");
         delay(1000);
     }
+    //ads.begin(0x49) 
+    //ads.begin(0x4A)
+    //ads.begin(0x4B)
     ads.setOperateMode(ADS1115_OS_SINGLE);   
     ads.setOperateStaus(ADS1115_MODE_CONTIN);
     ads.setPGAGain(ADS1115_PGA_6_144); //MAX 6.144V 
