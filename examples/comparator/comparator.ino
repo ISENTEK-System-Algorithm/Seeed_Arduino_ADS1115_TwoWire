@@ -19,8 +19,8 @@ void setup(void)
     //ads.begin(0x49) 
     //ads.begin(0x4A)
     //ads.begin(0x4B)
-    ads.setOperateMode(ADS1115_OS_SINGLE);   
-    ads.setOperateStaus(ADS1115_MODE_CONTIN);
+    ads.setOperateMode(ADS1115_MODE_SINGLE);   
+    ads.setOperateStaus(ADS1115_OS_SINGLE);
     ads.setPGAGain(ADS1115_PGA_6_144); //MAX 6.144V 
     ads.setSampleRate(ADS1115_DR_860); //860 SPS
     ads.setCompaMode(ADS1115_COMP_MODE_TRAD); 
