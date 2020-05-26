@@ -180,7 +180,9 @@ int16_t ADS1115<T>::getConversionResults(channel_t channel){
     setInputMux(_channelToMUX[channel]);
     writeRegister(ADS1115_POINTER_CONFIG, _configRegister);
     delay(ADS1115_CONVERSIONDELAY / (((_configRegister & ADS1115_DR_MASK)>>5) + 1));
-    return (readRegister(ADS1115_POINTER_CONVERT));
+    int16_t  ret_val =  readRegister(ADS1115_POINTER_CONVERT);
+    if(channel < 4 && ret_val < 0) ret_val = 0;
+    return (ret_val);
 }
 /**************************************************************************/
 /*!

@@ -20,8 +20,8 @@ void setup(void)
     //ads.begin(0x4A)
     //ads.begin(0x4B)
 
-    ads.setOperateMode(ADS1115_OS_SINGLE);   
-    ads.setOperateStaus(ADS1115_MODE_SINGLE);
+    ads.setOperateMode(ADS1115_MODE_SINGLE);   
+    ads.setOperateStaus(ADS1115_OS_SINGLE);
 
   ads.setPGAGain(ADS1115_PGA_6_144);    // 2/3x gain +/- 6.144V  1 bit =  0.1875mV (default)
     // ads.setPGAGain(ADS1115_PGA_4_096); // 1x gain   +/- 4.096V  1 bit =  0.125mV
