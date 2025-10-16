@@ -3,12 +3,12 @@
 template <class T>
 int16_t ADS1115<T>::_channelToMUX[CHANNELNUMS] = {ADS1115_MUX_0_G,ADS1115_MUX_1_G,ADS1115_MUX_2_G,
     ADS1115_MUX_3_G,ADS1115_MUX_0_1,ADS1115_MUX_0_3,ADS1115_MUX_1_3,ADS1115_MUX_2_3};
-template <class  T>
-T* ADS1115<T>::_pWire = 0;
-template<class T>
-uint8_t ADS1115<T>::_i2cAddress = 0;
-template<class T>
-uint16_t ADS1115<T>::_configRegister = ADS1115_DEFAULT_CONFIG;
+// template <class  T>
+// T* ADS1115<T>::_pWire = 0;
+// template<class T>
+// uint8_t ADS1115<T>::_i2cAddress = 0;
+// template<class T>
+// uint16_t ADS1115<T>::_configRegister = ADS1115_DEFAULT_CONFIG;
 /**************************************************************************/
 /*!
     @brief  Writes 16-bits to the specified destination register
@@ -19,6 +19,8 @@ uint16_t ADS1115<T>::_configRegister = ADS1115_DEFAULT_CONFIG;
 template <class T>
 ADS1115<T>::ADS1115(T& myWire){
     _pWire = &myWire;
+    _i2cAddress = 0; // Default value
+    _configRegister = ADS1115_DEFAULT_CONFIG; // Set default config for this object
 }
 /**************************************************************************/
 /*!

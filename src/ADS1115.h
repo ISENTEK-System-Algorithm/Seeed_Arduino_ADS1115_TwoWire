@@ -91,12 +91,12 @@ typedef enum
 template <class T>
 class ADS1115{
 private:
-    static T* _pWire;
-    static uint16_t _configRegister;
-    static uint8_t _i2cAddress;
+    T* _pWire;
+    uint16_t _configRegister;
+    uint8_t _i2cAddress;
     static int16_t _channelToMUX[];
-    static void writeRegister(uint8_t reg, uint16_t value);
-    static int16_t readRegister(uint8_t reg);
+    void writeRegister(uint8_t reg, uint16_t value);
+    int16_t readRegister(uint8_t reg);
 public:
     ADS1115(T& myWire);
     bool begin(uint8_t i2cAddress = ADS1115_GND_ADDRESS);
